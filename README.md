@@ -1,2 +1,3 @@
-# iquenttech-template
+# iquenttech Template
 Template for iquenttech
+Copyrights@KrishCdbry 
