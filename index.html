@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/sample.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.65">
+
+	<script src="assets/vendor/jquery/jquery.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/counter/counter.js"></script>
+	<script>
+		$(function () {
+			$('.tiles-menu').click(function () {
+				$('ul').toggleClass('small-menu').slideToggle();
+			});
+
+			$('.menu-name').click(function () {
+				$('.menu-name').removeClass('active');
+				$(this).addClass('active');
+				var elem = $('.' + $(this).attr('section'));
+				var pos = getElementPos(elem)-90;
+				$('body').animate({
+					scrollTop: pos
+				}, 1000);
+			});
+
+			function isElementInViewport(elem) {
+				var elem = $(elem);
+
+				// Get the scroll position of the page.
+				var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+				var viewportTop = $(scrollElem).scrollTop();
+
+				var viewportBottom = viewportTop + $(window).height();
+
+				// Get the position of the element on the page.
+				var elemTop = getElementPos(elem);
+				var elemBottom = elemTop + elem.height();
+
+				return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+			}
+
+			function getElementPos(elem) {
+				return Math.round(elem.offset().top);
+			}
+
+			function checkAnimation() {
+			//	var elem = $('.container-fluid.section-eight .timer');
+				var elemSection = $('.section-two');
+				var elemSectionThree = $('.section-three');
+				var elemSectionFour = $('.section-four');
+				var elemSectionFive = $('.section-five');
+				var elemSectionSix = $('.section-six');
+				var elemSectionEight = $('.section-eight');
+				var elemSectionTen = $('.section-ten');
+
+//				if (isElementInViewport(elem)) {
+//					$('.timer').each(function () {
+//						if($(this).html() != $(this).attr('data-to')) {
+//							$('.timer').countTo();
+//						}
+//					})
+//				}
+
+				if (isElementInViewport(elemSection)) {
+					setTimeout(function() {
+						$('.section-two').addClass('anim-up');
+					}, 500);
+				}
+
+				if (isElementInViewport(elemSectionThree)) {
+					setTimeout(function() {
+						$('.info-boxes').addClass('anim-right');
+						$('.info-boxes.left').addClass('anim-left');
+					}, 500);
+				}
+
+				if (isElementInViewport(elemSectionFour)) {
+					setTimeout(function() {
+						$('.section-four .about-heading').addClass('anim-up');
+						$('.info-level-four').addClass('anim-right');
+						$('.info-level-four.left').addClass('anim-left');
+					}, 500);
+				}
+
+				if (isElementInViewport(elemSectionFive)) {
+					setTimeout(function() {
+						$('.info-level-five span').addClass('rotate');
+					}, 500);
+				}
+
+				if (isElementInViewport(elemSectionSix)) {
+					setTimeout(function() {
+						$('.info-level-six').addClass('anim-up');
+					}, 500);
+				}
+
+				if (isElementInViewport(elemSectionEight)) {
+					setTimeout(function() {
+						$('.info-level-eight').addClass('anim-down');
+					}, 500);
+				}
+
+				if (isElementInViewport(elemSectionTen)) {
+					setTimeout(function() {
+						$('.info-level-ten .fa-hand-stop-o').addClass('zoomin');
+					}, 900);
+				}
+
+			}
+
+			$(window).scroll(function () {
+				checkAnimation();
+			});
+		})
+
+	</script>
+</head>
+<div class="main-header">
+	<div class="header-body">
+		<div class="logo-left">
+			<img src="assets/images/logo.png" style="height: 40px;">
+		</div>
+		<div class="tiles">
+			<a href="javascript:;" class="fa fa-list fa-3x tiles-menu"></a>
+		</div>
+		<ul>
+			<li><a href="javascript:;">
+				<div class="menu-name active" section='section-zero'>Home</div>
+			</a></li>
+			<li><a href="javascript:;">
+				<div class="menu-name" section='section-block-engineering-services'>Engineering Services</div>
+			</a></li>
+			<li><a href="javascript:;">
+				<div class="menu-name" section='section-block-software-offerings'>Software Offerings</div>
+			</a></li>
+			<li><a href="javascript:;">
+				<div class="menu-name" section='section-block-operations'>Operations</div>
+			</a></li>
+			<li><a href="javascript:;">
+				<div class="menu-name" section='section-block-careers'>Careers</div>
+			</a></li>
+			<li><a href="javascript:;">
+				<div class="menu-name" section='section-block-contact'>Contact</div>
+			</a></li>
+		</ul>
+	</div>
+</div>
+<div class="carousel-body section-zero">
+	<div class="carousel sample-carousel slide" data-ride="carousel" data-interval="4000" id="sm-carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#sm-carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#sm-carousel" data-slide-to="1"></li>
+			<li data-target="#sm-carousel" data-slide-to="2"></li>
+			<li data-target="#sm-carousel" data-slide-to="3"></li>
+			<li data-target="#sm-carousel" data-slide-to="4"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item slides active">
+				<div class="slide-1">
+					<div class="wrapper"></div>
+				</div>
+				<div class="sample-slide-heading" style="z-index:100">
+					<h1>Passionate <i class=""></i></h1>
+
+					<h3>We were a bunch of passionate flocks</h3>
+					<button class="btn btn-sample btn-lg" role="button">See all features</button>
+				</div>
+			</div>
+			<div class="item slides">
+				<div class="slide-2">
+					<div class="wrapper"></div>
+				</div>
+				<div class="sample-slide-heading">
+					<h1>Smart <i class="fa fa-code"></i></h1>
+
+					<h3>A group of smart coders</h3>
+					<button class="btn btn-sample btn-lg" role="button">See all features</button>
+				</div>
+			</div>
+			<div class="item slides">
+				<div class="slide-3">
+					<div class="wrapper"></div>
+				</div>
+				<div class="sample-slide-heading">
+					<h1>Logical</h1>
+
+					<h3>Our logic always stuns people</h3>
+					<button class="btn btn-sample btn-lg" role="button">See all features</button>
+				</div>
+			</div>
+			<div class="item slides">
+				<div class="slide-4">
+					<div class="wrapper"></div>
+				</div>
+				<div class="sample-slide-heading">
+					<h1>Strategy</h1>
+
+					<h3>We were perfectly strategic with proper planning</h3>
+					<button class="btn btn-sample btn-lg" role="button">See all features</button>
+				</div>
+			</div>
+			<div class="item slides">
+				<div class="slide-5">
+					<div class="wrapper"></div>
+				</div>
+				<div class="sample-slide-heading">
+					<h1>Perfection</h1>
+
+					<h3>Passion + Smart + logical + Strategic = Perfect product</h3>
+					<button class="btn btn-sample btn-lg" role="button">See all features</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<body>
+<div class="container-fluid section-one">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 info-top center-block">
+				<center>
+					<span class="fa fa-dribbble fa-5x"></span>
+
+					<h3>Lovely</h3>
+
+					<p style="padding-top: 20px;">
+						Having a beautiful template is awesomeness and if that is coded by krish that will be more
+						awesome and will have a very
+						nice future ahead. Keep utilizing me and have a cool journey
+					</p>
+					<br/>
+					<a href="javascript:;"><b><i>Learn more</i></b></a>
+				</center>
+			</div>
+			<div class="col-md-4 info-top center-info">
+				<center>
+					<span class="fa fa-angellist fa-5x"></span>
+
+					<h3>Victory</h3>
+
+					<p style="padding-top: 20px;">
+						Having a beautiful template is awesomeness and if that is coded by krish that will be more
+						awesome and will have a very
+						nice future ahead. Keep utilizing me and have a cool journey
+					</p>
+					<br/>
+					<a href="javascript:;"><b><i>Learn more</i></b></a>
+				</center>
+			</div>
+			<div class="col-md-4 info-top">
+				<center>
+					<span class="fa fa-dashcube fa-5x"></span>
+
+					<h3>Beauty</h3>
+
+					<p style="padding-top: 20px;">
+						Having a beautiful template is awesomeness and if that is coded by krish that will be more
+						awesome and will have a very
+						nice future ahead. Keep utilizing me and have a cool journey
+					</p>
+					<br/>
+					<a href="javascript:;"><b><i>Learn more</i></b></a>
+				</center>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid section-two section-heading-block">
+	<div class="container">
+		<div>
+			<center>
+				<h1 class="section-heading">Excellent Features</h1>
+				<hr class="heading"/>
+				<br/>
+			</center>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 info-level-two">
+				<center>
+					<span class="fa fa-line-chart"></span>
+					<br/>
+
+					<h3>Planning </h3>
+
+					<p>
+						Krishcdbry is very important in a project, need to have proper plans and make it more prettier &
+						simpler
+					</p>
+				</center>
+			</div>
+			<div class="col-md-3 info-level-two">
+				<center>
+					<span class="fa fa-dashcube"></span>
+					<br/>
+
+					<h3>Modelling </h3>
+
+					<p>
+						Krishcdbry is very important in a project, need to have proper plans and make it more prettier
+					</p>
+				</center>
+			</div>
+			<div class="col-md-3 info-level-two">
+				<center>
+					<span class="fa fa-pie-chart"></span>
+					<br/>
+
+					<h3>Dividing </h3>
+
+					<p>
+						Krishcdbry is very important in a project, need to have proper plans and make it more prettier &
+						simpler
+					</p>
+				</center>
+			</div>
+			<div class="col-md-3 info-level-two">
+				<center>
+					<span class="fa fa-safari"></span>
+					<br/>
+
+					<h3>Structuring </h3>
+
+					<p>
+						Krishcdbry is very important in a project, need to have proper plans and make it more prettier
+					</p>
+				</center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<br/>
+				<hr/>
+				<br/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 info-level-two">
+				<center>
+					<span class="fa fa-bullhorn"></span>
+					<br/>
+
+					<h3>Designing </h3>
+
+					<p>
+						Krishcdbry is very important in a project, need to have proper plans and make it more prettier &
+						simpler
+					</p>
+				</center>
+			</div>
+			<div class="col-md-3 info-level-two">
+				<center>
+					<span class="fa fa-dribbble"></span>
+					<br/>
+
+					<h3>Processing </h3>
+
+					<p>
+						Krishcdbry is very important in a project, need to have proper plans and make it more prettier
+					</p>
+				</center>
+			</div>
+			<div class="col-md-3 info-level-two">
+				<center>
+					<span class="fa fa-dropbox"></span>
+					<br/>
+
+					<h3>Building </h3>
+
+					<p>
+						Krishcdbry is very important in a project, need to have proper plans and make it more prettier &
+						simpler
+					</p>
+				</center>
+			</div>
+			<div class="col-md-3 info-level-two">
+				<center>
+					<span class="fa fa-magic"></span>
+					<br/>
+
+					<h3>Performance </h3>
+
+					<p>
+						Krishcdbry is very important in a project, need to have proper plans and make it more prettier
+					</p>
+				</center>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a name="engneering-services"></a>
+<div class="container-fluid section-three section-block-engineering-services">
+	<div class="container">
+		<div class="col-md-12 info-level-three">
+			<div class="info-boxes left">
+				<h1 class="gold">
+					Excellent
+				</h1>
+				<span>
+					People with excellent skills helps you get nice output
+				</span>
+				<hr/>
+				<p>
+					Krishcdbry is very important in a project, need to have proper plans and make it more prettier
+					some random stuff bla bla and having a cool nice info for any other
+				</p>
+				<a href="javascript:;">
+					<div class="more-info gold">
+						Connect
+					</div>
+				</a>
+			</div>
+			<div class="info-boxes">
+				<h1 class="light-green">
+					Interactive
+				</h1>
+				<span> People with best interaction make you feel better</span>
+				<hr/>
+				<p>
+					Krishcdbry is very important in a project, need to have proper plans and make it more prettier
+					some random stuff bla bla and having a cool nice info for any other
+				</p>
+				<a href="javascript:;">
+					<div class="more-info">
+						Interact
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a name="software-offerings"></a>
+<div class="container-fluid section-four section-block-software-offerings">
+	<div class="container about-heading">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-heading-block">
+					<center>
+						<h1 class="section-heading">About us</h1>
+						<hr class="heading"/>
+						<br/>
+						We the desing sample stuff We the desing sample stuff, <br/>
+						We the desing sample stuff and mainly the stuff
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" style="height: 75px;"></div>
+		</div>
+	</div>
+	<div class="container">
+		<!--<div class="row">-->
+			<!--<div class="col-md-6 text-right">-->
+				<!--<h3><b>Intro Video</b></h3>-->
+				<!--<hr class="intro-video"/>-->
+			<!--</div>-->
+			<!--<div class="col-md-6">-->
+				<!--<h3><b>Intro Data</b></h3>-->
+				<!--<hr class="intro-data"/>-->
+			<!--</div>-->
+		<!--</div>-->
+		<div class="row">
+			<div class="col-md-6 info-level-four left">
+				<h3 class="text-right"><b>Intro Video</b></h3>
+				<hr class="intro-video"/>
+				<div class="intro-vid-play">
+					<div class="video-play">
+						<span class="fa fa-play-circle-o fa-inverse"></span>
+					</div>
+				</div>
+				<br/>
+				<b> Source </b>: <i>Random video of the company latest interaction </i>
+			</div>
+			<div class="col-md-6 info-level-four">
+				<h3><b>Intro Data</b></h3>
+				<hr class="intro-data"/>
+				<p>
+					We the desing sample stuff We the desing sample stuff,
+					We the desing sample stuff and mainly the stuff, We the desing sample stuff We the desing sample
+					stuff,
+					We the desing sample stuff and mainly the stuff and having a lot of nice one's We the desing sample
+					stuff We the desing sample stuff,
+					We the desing sample stuff and mainly the stuff
+					We the desing sample stuff We the desing sample stuff,
+					We the desing sample stuff and mainly the stuff
+				<hr/>
+				We the desing sample stuff We the desing sample stuff,
+				We the desing sample stuff and mainly the stuff
+
+				We the desing sample stuff We the desing sample stuff,
+				We the desing sample stuff and mainly the stuff
+				<hr/>
+				<div class="more-info-data">
+					<div class="imp-data">
+						<i class="fa fa-dot-circle-o"></i> Proper staff <br/>
+						<i class="fa fa-dot-circle-o"></i> Nice interactive
+					</div>
+					<div class="imp-data">
+						<i class="fa fa-dot-circle-o"></i> Good staff <br/>
+						<i class="fa fa-dot-circle-o"></i> Random stuff
+					</div>
+				</div>
+				</p>
+				<button class="btn btn-sample btn-lg" role="button">Learn more</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a name="operations"></a>
+<div class="container-fluid section-five section-five-block section-block-operations">
+	<div class="wrapper">
+		<div class="container section-heading-block">
+			<div class="row">
+				<div class="col-md-12 info-level-five text-center">
+					<br/>
+
+					<h1> Process </h1>
+					<hr class="heading" style="border-top: 1px solid #fff;"/>
+					We the desing sample stuff We the desing sample stuff, <br/>
+					We the desing sample stuff and mainly the stuff
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12" style="height: 90px"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3 info-level-five">
+					<span class="fa fa-dribbble"></span>
+				</div>
+				<div class="col-sm-3 info-level-five">
+					<span class="fa fa-delicious"></span>
+				</div>
+				<div class="col-sm-3 info-level-five">
+					<span class="fa fa-code"></span>
+				</div>
+				<div class="col-sm-3 info-level-five">
+					<span class="fa fa-rocket"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a name="careers"></a>
+<div class="container-fluid section-block-careers">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-heading-block-body">
+					<center>
+						<h1 class="section-heading">Works</h1>
+						<hr class="heading"/>
+						<br/><br/>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 info-level-six">
+				<div class="info-main-body">
+					<div class="card-img" style="background: url('assets/images/1.jpg');background-size: cover;"></div>
+					<div class="card-text">
+						<h2> Sample One </h2>
+						<hr/>
+						<span>
+							Sample stuff data he opineion of may random stuff
+							and data have been under documents ad having
+							lot of stake under ut.
+						</span>
+						<br/><br/>
+						<a href="javascript:;" class="btn btn-sm">Read more >></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 info-level-six">
+				<div class="info-main-body">
+					<div class="card-img" style="background: url('assets/images/2.jpg');background-size: cover;"></div>
+					<div class="card-text">
+						<h2> Sample Two </h2>
+						<hr/>
+						<span>
+							Sample stuff data he opineion of may random stuff
+							and data have been under documents ad having
+							lot of stake under ut.
+						</span>
+						<br/><br/>
+						<a href="javascript:;" class="btn btn-sm">Read more >></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 info-level-six">
+				<div class="info-main-body">
+					<div class="card-img" style="background: url('assets/images/5.jpg');background-size: cover;"></div>
+					<div class="card-text">
+						<h2> Sample Three </h2>
+						<hr/>
+						<span>
+							Sample stuff data he opineion of may random stuff
+							and data have been under documents ad having
+							lot of stake under ut.
+						</span>
+						<br/><br/>
+						<a href="javascript:;" class="btn btn-sm">Read more >></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 info-level-six">
+				<div class="info-main-body">
+					<div class="card-img" style="background: url('assets/images/9.jpg');background-size: cover;"></div>
+					<div class="card-text">
+						<h2> Sample Four </h2>
+						<hr/>
+						<span>
+							Sample stuff data he opineion of may random stuff
+							and data have been under documents ad having
+							lot of stake under ut.
+						</span>
+						<br/><br/>
+						<a href="javascript:;" class="btn btn-sm">Read more >></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 info-level-six">
+				<div class="info-main-body">
+					<div class="card-img" style="background: url('assets/images/5.jpg');background-size: cover;"></div>
+					<div class="card-text">
+						<h2> Sample Five </h2>
+						<hr/>
+						<span>
+							Sample stuff data he opineion of may random stuff
+							and data have been under documents ad having
+							lot of stake under ut.
+						</span>
+						<br/><br/>
+						<a href="javascript:;" class="btn btn-sm">Read more >></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 info-level-six">
+				<div class="info-main-body">
+					<div class="card-img" style="background: url('assets/images/8.jpg');background-size: cover;"></div>
+					<div class="card-text">
+						<h2> Sample Six </h2>
+						<hr/>
+						<span>
+							Sample stuff data he opineion of may random stuff
+							and data have been under documents ad having
+							lot of stake under ut.
+						</span>
+						<br/><br/>
+						<a href="javascript:;" class="btn btn-sm">Read more >></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div id>
+
+<div class="container-fluid section-seven">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-heading-block-body">
+					<center>
+						<h1 class="section-heading">Testimonals</h1>
+						<hr class="heading"/>
+						<br/><br/>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="testimonal">
+					<li>
+						<div class="testimonal-image">
+							<img class="img-circle img-responsive" src="assets/images/users/1.jpg" alt="">
+						</div>
+						<div class="testimonal-panel">
+							<div class="testimonal-heading">
+								<h4>Krishcdbry</h4>
+								<h4 class="subheading">CEO & Founder, Heartynote Groups</h4>
+							</div>
+							<div class="testimonal-body">
+								<p class="text-muted">
+									Sample stuff data he opineion of may random stuff
+									and data have been under documents ad having
+									lot of stake under ut.
+								</p>
+							</div>
+						</div>
+						<div class="line"></div>
+					</li>
+					<li class="testimonal-inverted">
+						<div class="testimonal-image">
+							<img class="img-circle img-responsive" src="assets/images/users/2.jpg" alt="">
+						</div>
+						<div class="testimonal-panel">
+							<div class="testimonal-heading">
+								<h4>Kingcdbry</h4>
+								<h4 class="subheading">Software Engineer, krishcdbry Pvt Ltd.</h4>
+							</div>
+							<div class="testimonal-body">
+								<p class="text-muted">
+									Sample stuff data he opineion of may random stuff
+									and data have been under documents ad having
+									lot of stake under ut.
+								</p>
+							</div>
+						</div>
+						<div class="line"></div>
+					</li>
+					<li>
+						<div class="testimonal-image">
+							<img class="img-circle img-responsive" src="assets/images/users/3.jpg" alt="">
+						</div>
+						<div class="testimonal-panel">
+							<div class="testimonal-heading">
+								<h4>Krishcdbry</h4>
+								<h4 class="subheading">Technical Lead, miSport Pvt Ltd</h4>
+							</div>
+							<div class="testimonal-body">
+								<p class="text-muted">
+									Sample stuff data he opineion of may random stuff
+									and data have been under documents ad having
+									lot of stake under ut.
+								</p>
+							</div>
+						</div>
+						<div class="line"></div>
+					</li>
+					<li class="testimonal-inverted">
+						<div class="testimonal-image">
+							<img class="img-circle img-responsive" src="assets/images/users/1.jpg" alt="">
+						</div>
+						<div class="testimonal-panel">
+							<div class="testimonal-heading">
+								<h4>Krishcdbry</h4>
+								<h4 class="subheading">CEO & Founder, Heartynote Groups</h4>
+							</div>
+							<div class="testimonal-body">
+								<p class="text-muted">
+									Sample stuff data he opineion of may random stuff
+									and data have been under documents ad having
+									lot of stake under ut.
+								</p>
+							</div>
+						</div>
+						<div class="line"></div>
+					</li>
+					<li>
+						<div class="testimonal-image">
+							<img class="img-circle img-responsive" src="assets/images/users/2.jpg" alt="">
+						</div>
+						<div class="testimonal-panel">
+							<div class="testimonal-heading">
+								<h4>Kingcdbry</h4>
+								<h4 class="subheading">Software Engineer, krishcdbry Pvt Ltd.</h4>
+							</div>
+							<div class="testimonal-body">
+								<p class="text-muted">
+									Sample stuff data he opineion of may random stuff
+									and data have been under documents ad having
+									lot of stake under ut.
+								</p>
+							</div>
+						</div>
+						<div class="line"></div>
+					</li>
+					<li class="testimonal-inverted">
+						<div class="testimonal-image">
+							<img class="img-circle img-responsive" src="assets/images/users/3.jpg" alt="">
+						</div>
+						<div class="testimonal-panel">
+							<div class="testimonal-heading">
+								<h4>Krishcdbry</h4>
+								<h4 class="subheading">Technical Lead, miSport Pvt Ltd</h4>
+							</div>
+							<div class="testimonal-body">
+								<p class="text-muted">
+									Sample stuff data he opineion of may random stuff
+									and data have been under documents ad having
+									lot of stake under ut.
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14036.302805325167!2d77.03917530000001!3d28.416972549999997!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1463063218103"
+        height="690" class="container-fluid" width="100%" frameborder="0"
+        style="border:0;padding-right: 0px; padding-left:0px;" allowfullscreen></iframe>
+
+<a name="contact"></a>
+<div class="container-fluid section-five-block section-ten section-block-contact">
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-heading-block">
+						<center>
+							<h1 class="section-heading">Say hye to us !</h1>
+							<hr class="heading"/>
+							<br/><br/>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 info-level-ten text-center">
+					<h1 class="fa fa-hand-stop-o"></h1>
+					<br/><br/><br/>
+
+					<h3>Please fill you details </h3>
+
+					<div class="contact-form">
+						<div class="contact-input-item col-md-4">
+							<input type="text" class="contact-input-item" placeholder="You name here">
+						</div>
+						<div class="contact-input-item col-md-4">
+							<input type="text" class="contact-input-item" placeholder="Your email here">
+						</div>
+						<div class="contact-input-item col-md-4">
+							<input type="text" class="contact-input-item" placeholder="Your contact here">
+						</div>
+						<div class="contact-input-item contact-input-btn col-md-12">
+							<a href="javascript:;" class="btn btn-lg"><i class="fa fa-send-o"></i> Send</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid" style="background-color: #222; height: 475px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<br/><br/>
+				<span class="fa fa-behance fa-inverse" style="font-size:72px"></span>
+				<hr style="margin-right: 93%"/>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
