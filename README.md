@@ -1,3 +1,3 @@
-# iquenttech Template
+# Iquenttech Template
 Template for iquenttech
 
