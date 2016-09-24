@@ -49,66 +49,28 @@
 			}
 
 			function checkAnimation() {
-			//	var elem = $('.container-fluid.section-eight .timer');
-				var elemSection = $('.section-two');
-				var elemSectionThree = $('.section-three');
-				var elemSectionFour = $('.section-four');
-				var elemSectionFive = $('.section-five');
-				var elemSectionSix = $('.section-six');
-				var elemSectionEight = $('.section-eight');
-				var elemSectionTen = $('.section-ten');
+				var blockOne = $('.engineering-services-body');
+				var blockTwo = $('.software-offerings-body');
+				var blockThree = $('.section-block-operations');
 
-//				if (isElementInViewport(elem)) {
-//					$('.timer').each(function () {
-//						if($(this).html() != $(this).attr('data-to')) {
-//							$('.timer').countTo();
-//						}
-//					})
-//				}
-
-				if (isElementInViewport(elemSection)) {
+				if (isElementInViewport(blockOne)) {
 					setTimeout(function() {
-						$('.section-two').addClass('anim-up');
+						$('.info-level-two').addClass('anim-down');
 					}, 500);
 				}
 
-				if (isElementInViewport(elemSectionThree)) {
+
+				if (isElementInViewport(blockTwo)) {
 					setTimeout(function() {
-						$('.info-boxes').addClass('anim-right');
-						$('.info-boxes.left').addClass('anim-left');
+						$('.software-offering-thumbs').addClass('anim-up');
 					}, 500);
 				}
 
-				if (isElementInViewport(elemSectionFour)) {
-					setTimeout(function() {
-						$('.section-four .about-heading').addClass('anim-up');
-						$('.info-level-four').addClass('anim-right');
-						$('.info-level-four.left').addClass('anim-left');
-					}, 500);
-				}
 
-				if (isElementInViewport(elemSectionFive)) {
+				if (isElementInViewport(blockThree)) {
 					setTimeout(function() {
-						$('.info-level-five span').addClass('rotate');
+						$('.info-level-five > div').addClass('rotate');
 					}, 500);
-				}
-
-				if (isElementInViewport(elemSectionSix)) {
-					setTimeout(function() {
-						$('.info-level-six').addClass('anim-up');
-					}, 500);
-				}
-
-				if (isElementInViewport(elemSectionEight)) {
-					setTimeout(function() {
-						$('.info-level-eight').addClass('anim-down');
-					}, 500);
-				}
-
-				if (isElementInViewport(elemSectionTen)) {
-					setTimeout(function() {
-						$('.info-level-ten .fa-hand-stop-o').addClass('zoomin');
-					}, 900);
 				}
 
 			}
@@ -228,7 +190,7 @@
 				<center>
 					<span class="fa fa-dribbble fa-5x"></span>
 
-					<h3>Lovely</h3>
+					<h3>Innovative</h3>
 
 					<p style="padding-top: 20px;">
 						Having a beautiful template is awesomeness and if that is coded by krish that will be more
@@ -243,7 +205,7 @@
 				<center>
 					<span class="fa fa-angellist fa-5x"></span>
 
-					<h3>Victory</h3>
+					<h3>Smarter</h3>
 
 					<p style="padding-top: 20px;">
 						Having a beautiful template is awesomeness and if that is coded by krish that will be more
@@ -258,7 +220,7 @@
 				<center>
 					<span class="fa fa-dashcube fa-5x"></span>
 
-					<h3>Beauty</h3>
+					<h3>Strategy</h3>
 
 					<p style="padding-top: 20px;">
 						Having a beautiful template is awesomeness and if that is coded by krish that will be more
@@ -273,16 +235,27 @@
 	</div>
 </div>
 
-<div class="container-fluid section-two section-heading-block">
-	<div class="container">
-		<div>
-			<center>
-				<h1 class="section-heading">Excellent Features</h1>
-				<hr class="heading"/>
-				<br/>
-			</center>
+<a name="engneering-services"></a>
+<div class="container-fluid block-one section-block section-header engineering-services-header section-block-engineering-services">
+	<div class="wrapper">
+		<div class="container section-heading-block">
+			<div class="row">
+				<div class="col-md-12 info-level-five text-center">
+					<br/>
+
+					<h1> Engineering Services </h1>
+					<hr class="heading" style="border-top: 1px solid #fff;"/>
+					We the desing sample stuff We the desing sample stuff, <br/>
+					We the desing sample stuff and mainly the stuff
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12" style="height: 90px"></div>
+			</div>
 		</div>
 	</div>
+</div>
+<div class="container-fluid block-one section-block engineering-services-body ">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 info-level-two">
@@ -398,138 +371,16 @@
 	</div>
 </div>
 
-<a name="engneering-services"></a>
-<div class="container-fluid section-three section-block-engineering-services">
-	<div class="container">
-		<div class="col-md-12 info-level-three">
-			<div class="info-boxes left">
-				<h1 class="gold">
-					Excellent
-				</h1>
-				<span>
-					People with excellent skills helps you get nice output
-				</span>
-				<hr/>
-				<p>
-					Krishcdbry is very important in a project, need to have proper plans and make it more prettier
-					some random stuff bla bla and having a cool nice info for any other
-				</p>
-				<a href="javascript:;">
-					<div class="more-info gold">
-						Connect
-					</div>
-				</a>
-			</div>
-			<div class="info-boxes">
-				<h1 class="light-green">
-					Interactive
-				</h1>
-				<span> People with best interaction make you feel better</span>
-				<hr/>
-				<p>
-					Krishcdbry is very important in a project, need to have proper plans and make it more prettier
-					some random stuff bla bla and having a cool nice info for any other
-				</p>
-				<a href="javascript:;">
-					<div class="more-info">
-						Interact
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-</div>
 
 <a name="software-offerings"></a>
-<div class="container-fluid section-four section-block-software-offerings">
-	<div class="container about-heading">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-heading-block">
-					<center>
-						<h1 class="section-heading">About us</h1>
-						<hr class="heading"/>
-						<br/>
-						We the desing sample stuff We the desing sample stuff, <br/>
-						We the desing sample stuff and mainly the stuff
-					</center>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12" style="height: 75px;"></div>
-		</div>
-	</div>
-	<div class="container">
-		<!--<div class="row">-->
-			<!--<div class="col-md-6 text-right">-->
-				<!--<h3><b>Intro Video</b></h3>-->
-				<!--<hr class="intro-video"/>-->
-			<!--</div>-->
-			<!--<div class="col-md-6">-->
-				<!--<h3><b>Intro Data</b></h3>-->
-				<!--<hr class="intro-data"/>-->
-			<!--</div>-->
-		<!--</div>-->
-		<div class="row">
-			<div class="col-md-6 info-level-four left">
-				<h3 class="text-right"><b>Intro Video</b></h3>
-				<hr class="intro-video"/>
-				<div class="intro-vid-play">
-					<div class="video-play">
-						<span class="fa fa-play-circle-o fa-inverse"></span>
-					</div>
-				</div>
-				<br/>
-				<b> Source </b>: <i>Random video of the company latest interaction </i>
-			</div>
-			<div class="col-md-6 info-level-four">
-				<h3><b>Intro Data</b></h3>
-				<hr class="intro-data"/>
-				<p>
-					We the desing sample stuff We the desing sample stuff,
-					We the desing sample stuff and mainly the stuff, We the desing sample stuff We the desing sample
-					stuff,
-					We the desing sample stuff and mainly the stuff and having a lot of nice one's We the desing sample
-					stuff We the desing sample stuff,
-					We the desing sample stuff and mainly the stuff
-					We the desing sample stuff We the desing sample stuff,
-					We the desing sample stuff and mainly the stuff
-				<hr/>
-				We the desing sample stuff We the desing sample stuff,
-				We the desing sample stuff and mainly the stuff
-
-				We the desing sample stuff We the desing sample stuff,
-				We the desing sample stuff and mainly the stuff
-				<hr/>
-				<div class="more-info-data">
-					<div class="imp-data">
-						<i class="fa fa-dot-circle-o"></i> Proper staff <br/>
-						<i class="fa fa-dot-circle-o"></i> Nice interactive
-					</div>
-					<div class="imp-data">
-						<i class="fa fa-dot-circle-o"></i> Good staff <br/>
-						<i class="fa fa-dot-circle-o"></i> Random stuff
-					</div>
-				</div>
-				</p>
-				<button class="btn btn-sample btn-lg" role="button">Learn more</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<a name="operations"></a>
-<div class="container-fluid section-five section-five-block section-block-operations">
+<div class="container-fluid block-two section-block section-header software-offerings-header section-block-software-offerings">
 	<div class="wrapper">
 		<div class="container section-heading-block">
 			<div class="row">
 				<div class="col-md-12 info-level-five text-center">
 					<br/>
 
-					<h1> Process </h1>
+					<h1> Software Offerings </h1>
 					<hr class="heading" style="border-top: 1px solid #fff;"/>
 					We the desing sample stuff We the desing sample stuff, <br/>
 					We the desing sample stuff and mainly the stuff
@@ -538,42 +389,14 @@
 			<div class="row">
 				<div class="col-md-12" style="height: 90px"></div>
 			</div>
-			<div class="row">
-				<div class="col-sm-3 info-level-five">
-					<span class="fa fa-dribbble"></span>
-				</div>
-				<div class="col-sm-3 info-level-five">
-					<span class="fa fa-delicious"></span>
-				</div>
-				<div class="col-sm-3 info-level-five">
-					<span class="fa fa-code"></span>
-				</div>
-				<div class="col-sm-3 info-level-five">
-					<span class="fa fa-rocket"></span>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
-
-<a name="careers"></a>
-<div class="container-fluid section-block-careers">
+<div class="container-fluid block-two section-block software-offerings-body">
+	<br/><br/><br/>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="section-heading-block-body">
-					<center>
-						<h1 class="section-heading">Works</h1>
-						<hr class="heading"/>
-						<br/><br/>
-					</center>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 info-level-six">
+			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
 					<div class="card-img" style="background: url('assets/images/1.jpg');background-size: cover;"></div>
 					<div class="card-text">
@@ -589,7 +412,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 info-level-six">
+			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
 					<div class="card-img" style="background: url('assets/images/2.jpg');background-size: cover;"></div>
 					<div class="card-text">
@@ -605,7 +428,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 info-level-six">
+			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
 					<div class="card-img" style="background: url('assets/images/5.jpg');background-size: cover;"></div>
 					<div class="card-text">
@@ -623,7 +446,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 info-level-six">
+			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
 					<div class="card-img" style="background: url('assets/images/9.jpg');background-size: cover;"></div>
 					<div class="card-text">
@@ -639,7 +462,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 info-level-six">
+			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
 					<div class="card-img" style="background: url('assets/images/5.jpg');background-size: cover;"></div>
 					<div class="card-text">
@@ -655,7 +478,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 info-level-six">
+			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
 					<div class="card-img" style="background: url('assets/images/8.jpg');background-size: cover;"></div>
 					<div class="card-text">
@@ -673,7 +496,74 @@
 			</div>
 		</div>
 	</div>
-</div id>
+</div>
+
+
+<a name="operations"></a>
+<div class="container-fluid block-two section-block section-header operations-header section-block-operations">
+	<div class="wrapper">
+		<div class="container section-heading-block">
+			<div class="row">
+				<div class="col-md-12 info-level-five text-center">
+					<br/>
+
+					<h1> Operations </h1>
+					<hr class="heading" style="border-top: 1px solid #fff;"/>
+					We the desing sample stuff We the desing sample stuff, <br/>
+					We the desing sample stuff and mainly the stuff
+				</div>
+			</div>
+			<div class="col-md-12" style="height: 90px"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 info-level-five">
+				<div class="center-block center">
+					Project Management
+				</div>
+			</div>
+			<div class="col-sm-4 info-level-five">
+				<div class="center-block center">
+					Release Management
+				</div>
+			</div>
+			<div class="col-sm-4 info-level-five">
+				<div class="center-block center">
+					Service Management
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12" style="height: 45px;">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 info-level-five">
+				<div class="center-block center">
+					Quality management
+				</div>
+			</div>
+			<div class="col-sm-4 info-level-five">
+				<div class="center-block center">
+					Agile Development
+				</div>
+			</div>
+			<div class="col-sm-4 info-level-five">
+				<div class="center-block center">
+					Sustenance
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<a name="careers"></a>
+<div class="container block-two section-block section-header careers-header section-block-careers">
+	<div class="col-xs-12">
+		<h1>Careers</h1>
+	</div>
+</div>
 
 <div class="container-fluid section-seven">
 	<div class="container">
@@ -812,12 +702,11 @@
 	</div>
 </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14036.302805325167!2d77.03917530000001!3d28.416972549999997!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1463063218103"
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.086339932076!2d-74.03710638398047!3d40.71611577933155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250a924da09ad%3A0xff456387edb563e1!2s101+Hudson+St%2C+Jersey+City%2C+NJ+07302%2C+USA!5e0!3m2!1sen!2sin!4v1474753460405"
         height="690" class="container-fluid" width="100%" frameborder="0"
         style="border:0;padding-right: 0px; padding-left:0px;" allowfullscreen></iframe>
-
 <a name="contact"></a>
-<div class="container-fluid section-five-block section-ten section-block-contact">
+<div class="container-fluid section-block section-ten section-block-contact">
 	<div class="wrapper">
 		<div class="container">
 			<div class="row">

@@ -322,6 +322,7 @@ Template Each
 	background: transparent;
 	padding: 30px 45px;
 	align-items: center;
+	opacity: 0;
 }
 
 .info-level-two h3 {
@@ -391,20 +392,26 @@ h1.section-heading {
 	opacity: 0;
 }
 
-.section-block-operations {
-	margin-top: 90px;
-	background: url('../images/engineering-services.jpg');
+.section-header {
 	background-size: cover;
 	padding-left: 0px;
 	padding-right: 0px;
 	background-repeat: no-repeat;
 }
 
-.template-each .section-block-operations {
-	 margin-top: 0px;
+.engineering-services-header {
+	background: url('../images/engineering-services.jpg');
 }
 
-.section-five-block .wrapper {
+.software-offerings-header {
+	background: url('../images/software-offerings.jpg');
+}
+
+.operations-header {
+	background: url('../images/operations.jpg');
+}
+
+.section-block .wrapper {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -514,6 +521,26 @@ h1.section-heading {
 	font-size: 50px;
 }
 
+.info-level-five > div {
+	font-size: 19px;
+	height: 200px;
+	padding: 20px;
+	padding-top: 68px;
+	line-height: 31px;
+	text-align: center;
+	width: 200px;
+	border-radius: 100%;
+	color: #fff;
+	background-color: teal;
+	box-shadow: inset 0 0 0 1px #d7d7d7;
+	-webkit-box-shadow: inset 0 0 0 1px #d7d7d7;
+	transition: background-color 400ms, background-color 400ms;
+	position: relative;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
 .info-level-five span {
 	font-size: 120px;
 	height: 200px;
@@ -531,7 +558,7 @@ h1.section-heading {
 	transition: all 0.2s ease;
 }
 
-.info-level-five span:after {
+.info-level-five span:after, .info-level-five > div:after {
 	content: "";
 	position: absolute;
 	width: 20px;
@@ -544,8 +571,8 @@ h1.section-heading {
 	background: #1abc9c;
 }
 
-.info-level-five span:hover {
-	background-color: #1abc9c;
+.info-level-five span:hover, .info-level-five > div:hover {
+	background-color: mediumseagreen;
 	color: #fff;
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
@@ -558,41 +585,46 @@ h1.section-heading {
 	margin-top: 88px;
 }
 
+
+.engineering-services-body {
+  padding: 90px 0px;
+}
+
 /********************************
 *********************************
-Level six
+Software Offerings
 *********************************
 ********************************/
 
-.info-level-six {
+.software-offering-thumbs {
 	height: 475px;
 	opacity: 0;
 }
 
-.info-level-six .info-main-body {
+.software-offering-thumbs .info-main-body {
 	border: 1px solid #f0f0f0;
 }
 
-.info-level-six .info-main-body > .card-img{
+.software-offering-thumbs .info-main-body > .card-img{
 	width: 100%;
 	height: 200px;
 }
 
-.info-level-six .info-main-body .card-text {
+.software-offering-thumbs .info-main-body .card-text {
 	padding: 10px 25px;
 }
 
-.info-level-six .info-main-body .card-text h2 {
+.software-offering-thumbs .info-main-body .card-text h2 {
 	font-size: 23px;
 	color: #1abc9c;
 }
 
-.info-level-six .info-main-body .card-text span {
+.software-offering-thumbs .info-main-body .card-text span {
 	font-size: 14px;
 	color: #000;
 }
 
-.info-level-six .info-main-body .card-text .btn {
+.software-offering-thumbs .info-main-body .card-text .btn {
 	background: #17a689;
 }
 
@@ -930,6 +962,8 @@ Testimonal level-seven
 	background: url(../images/9.jpg);
 	background-size: cover;
 	height: auto;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 
 .info-level-ten h1{
@@ -974,7 +1008,27 @@ Testimonal level-seven
 	border: 1px solid transparent;
 }
 
-@media screen and (min-width: 960px) {
+@media (max-width: 1578px){
+	.logo-left {
+		margin-left: 3%;
+	}
+
+	.main-header ul {
+		margin-right: 5%;
+	}
+}
+
+@media (max-width: 1378px){
+	.logo-left {
+		margin-left: 3%;
+	}
+
+	.main-header ul {
+		margin-right: 1%;
+	}
+}
+
+@media screen and (min-width: 1170px) {
 	.sample-slide-heading {
 		width: 980px;
 	}
@@ -983,7 +1037,7 @@ Testimonal level-seven
 	}
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1200px) {
 	.info-level-three .info-boxes {
 		min-height: 400px;
 		padding: 43px 30px;
