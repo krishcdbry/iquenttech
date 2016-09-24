@@ -401,14 +401,32 @@ h1.section-heading {
 
 .engineering-services-header {
 	background: url('../images/engineering-services.jpg');
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .software-offerings-header {
 	background: url('../images/software-offerings.jpg');
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .operations-header {
 	background: url('../images/operations.jpg');
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.contact-header {
+	background: url('../images/operations.jpg');
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.careers-header {
+	background: url('../images/operations.jpg');
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .section-block .wrapper {
