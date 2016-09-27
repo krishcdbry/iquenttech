@@ -5,6 +5,7 @@
 
 body {
 	font-family: "Trebuchet MS";
+	overflow-x: hidden!important;
 }
 
 a {
