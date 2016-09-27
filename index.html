@@ -14,16 +14,16 @@
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/vendor/counter/counter.js"></script>
 	<script>
-		$(function () {
-			$('.tiles-menu').click(function () {
+		$(function() {
+			$('.tiles-menu').click(function() {
 				$('ul').toggleClass('small-menu').slideToggle();
 			});
 
-			$('.menu-name').click(function () {
+			$('.menu-name').click(function() {
 				$('.menu-name').removeClass('active');
 				$(this).addClass('active');
 				var elem = $('.' + $(this).attr('section'));
-				var pos = getElementPos(elem)-90;
+				var pos = getElementPos(elem) - 90;
 				$('body').animate({
 					scrollTop: pos
 				}, 1000);
@@ -53,6 +53,7 @@
 				var blockOne = $('.engineering-services-body');
 				var blockTwo = $('.software-offerings-body');
 				var blockThree = $('.section-block-operations');
+				var blockFour = $('.section-block-contact');
 
 				if (isElementInViewport(blockOne)) {
 					setTimeout(function() {
@@ -60,13 +61,11 @@
 					}, 500);
 				}
 
-
 				if (isElementInViewport(blockTwo)) {
 					setTimeout(function() {
 						$('.software-offering-thumbs').addClass('anim-up');
 					}, 500);
 				}
-
 
 				if (isElementInViewport(blockThree)) {
 					setTimeout(function() {
@@ -74,9 +73,15 @@
 					}, 500);
 				}
 
+				if (isElementInViewport(blockFour)) {
+					setTimeout(function() {
+						$('.fa-hand-stop-o').addClass('zoomin');
+					}, 900);
+				}
+
 			}
 
-			$(window).scroll(function () {
+			$(window).scroll(function() {
 				checkAnimation();
 			});
 		})
@@ -130,10 +135,12 @@
 					<div class="wrapper"></div>
 				</div>
 				<div class="sample-slide-heading" style="z-index:100">
-					<h1>Passionate <i class=""></i></h1>
+					<h1>Innovative Ideas <i class=""></i></h1>
 
-					<h3>We were a bunch of passionate flocks</h3>
-					<button class="btn btn-sample btn-lg" role="button">See all features</button>
+					<h4>Gartner says, 25 Billion Connected "Things" Will Be in Use by 2020.
+						Our expert services help you in taking advantage of the rapidly growing business opportunities presented by Machine to Machine
+					</h4>
+					<!--<button class="btn btn-sample btn-lg" role="button">See all features</button>-->
 				</div>
 			</div>
 			<div class="item slides">
@@ -141,10 +148,11 @@
 					<div class="wrapper"></div>
 				</div>
 				<div class="sample-slide-heading">
-					<h1>Smart <i class="fa fa-code"></i></h1>
+					<h1>IT Solutions and Services <i class="fa fa-code"></i></h1>
 
-					<h3>A group of smart coders</h3>
-					<button class="btn btn-sample btn-lg" role="button">See all features</button>
+					<h4>
+						We deliver customer centric, innovative, agile and cost effective Solutions and Services</h4>
+					<!--<button class="btn btn-sample btn-lg" role="button">See all features</button>-->
 				</div>
 			</div>
 			<div class="item slides">
@@ -152,10 +160,10 @@
 					<div class="wrapper"></div>
 				</div>
 				<div class="sample-slide-heading">
-					<h1>Logical</h1>
+					<h1>Smart</h1>
 
-					<h3>Our logic always stuns people</h3>
-					<button class="btn btn-sample btn-lg" role="button">See all features</button>
+					<h3>Support your key business processes with our specialized Mobility Solutions and Services</h3>
+					<!--<button class="btn btn-sample btn-lg" role="button">See all features</button>-->
 				</div>
 			</div>
 			<div class="item slides">
@@ -163,23 +171,24 @@
 					<div class="wrapper"></div>
 				</div>
 				<div class="sample-slide-heading">
-					<h1>Strategy</h1>
+					<h1>We push boundaries</h1>
 
-					<h3>We were perfectly strategic with proper planning</h3>
-					<button class="btn btn-sample btn-lg" role="button">See all features</button>
+					<h3>We help you make your IT infrastructure reliable, scalable, and yet dynamic enough to keep pace with the competition
+					</h3>
+					<!--<button class="btn btn-sample btn-lg" role="button">See all features</button>-->
 				</div>
 			</div>
-			<div class="item slides">
-				<div class="slide-5">
-					<div class="wrapper"></div>
-				</div>
-				<div class="sample-slide-heading">
-					<h1>Perfection</h1>
+			<!--<div class="item slides">-->
+				<!--<div class="slide-5">-->
+					<!--<div class="wrapper"></div>-->
+				<!--</div>-->
+				<!--<div class="sample-slide-heading">-->
+					<!--<h1>Perfection</h1>-->
 
-					<h3>Passion + Smart + logical + Strategic = Perfect product</h3>
-					<button class="btn btn-sample btn-lg" role="button">See all features</button>
-				</div>
-			</div>
+					<!--<h3>Passion + Smart + logical + Strategic = Perfect product</h3>-->
+					<!--<button class="btn btn-sample btn-lg" role="button">See all features</button>-->
+				<!--</div>-->
+			<!--</div>-->
 		</div>
 	</div>
 </div>
@@ -236,8 +245,9 @@
 	</div>
 </div>
 
-<a name="engneering-services"></a>
-<div class="container-fluid block-one section-block section-header engineering-services-header section-block-engineering-services">
+<a name="engineering-services"></a>
+<div
+	class="container-fluid block-one section-block section-header engineering-services-header section-block-engineering-services">
 	<div class="wrapper">
 		<div class="container section-heading-block">
 			<div class="row">
@@ -261,13 +271,14 @@
 		<div class="row">
 			<div class="col-md-4 info-level-two">
 				<center>
-				<a href="business-analysis.html"><span class="fa fa-line-chart"></span></a>
+					<a href="business-analysis.html"><span class="fa fa-line-chart"></span></a>
 					<br/>
 
 					<h3>Business Analysis </h3>
 
 					<p align="justify">
-						Our Business Consulting Services deliver business transformational offerings to help your business
+						Our Business Consulting Services deliver business transformational offerings to help your
+						business
 						transform with certainty and produce tangible benefits
 					</p>
 				</center>
@@ -280,7 +291,8 @@
 					<h3>Strategy & Design </h3>
 
 					<p align="justify">
-						Our comprehensive Product Management Strategy provides the discipline and structure needed to develop
+						Our comprehensive Product Management Strategy provides the discipline and structure needed to
+						develop
 						quality and innovative Products, Solutions and Services
 					</p>
 				</center>
@@ -293,7 +305,8 @@
 					<h3>System Integration </h3>
 
 					<p align="justify">
-						We bring Systems, Networks, Products and Services together, to build and deliver integrated Solutions
+						We bring Systems, Networks, Products and Services together, to build and deliver integrated
+						Solutions
 						to meet your business needs and bring you success
 					</p>
 				</center>
@@ -316,32 +329,35 @@
 					<h3>Machine to Machine </h3>
 
 					<p align="justify">
-						Our expert Services help you in taking advantage of the rapidly growing business opportunities presented by M2M
+						Our expert Services help you in taking advantage of the rapidly growing business opportunities
+						presented by M2M
 					</p>
 				</center>
 			</div>
 			<div class="col-md-4 info-level-two">
 				<center>
-					<a href="enterprise-mobility-services.html"><span class="fa fa-bullhorn"></span></a>
+					<a href="enterprise-mobility-services.html"><span class="fa fa-mobile-phone"></span></a>
 					<br/>
 
 					<h3>Mobility </h3>
 
 					<p align="justify">
-						Support your key business processes with our specialized Mobility Solutions and Services and make your work
+						Support your key business processes with our specialized Mobility Solutions and Services and
+						make your work
 						environment more protected and productive
 					</p>
 				</center>
 			</div>
 			<div class="col-md-4 info-level-two">
 				<center>
-					<a href="testing-validation.html"><span class="fa fa-dribbble"></span></a>
+					<a href="testing-validation.html"><span class="fa fa-cogs"></span></a>
 					<br/>
 
 					<h3>Testing </h3>
 
 					<p align="justify">
-						Improve Quality, Time to Market and Stability for your Products and Solutions through our smart, efficient and
+						Improve Quality, Time to Market and Stability for your Products and Solutions through our smart,
+						efficient and
 						cost-effective Testing approach.
 					</p>
 				</center>
@@ -364,7 +380,8 @@
 					<h3>Deployment </h3>
 
 					<p align="justify">
-						We deliver technology along with brand aligned customer experience, to ensure seamless deliver, operational
+						We deliver technology along with brand aligned customer experience, to ensure seamless deliver,
+						operational
 						efficiency and business success
 					</p>
 				</center>
@@ -377,20 +394,22 @@
 					<h3>Analytics </h3>
 
 					<p align="justify">
-						Identify potential value hidden in data sources and extract tangible business value through our intelligent
+						Identify potential value hidden in data sources and extract tangible business value through our
+						intelligent
 						Data Analytics Services
 					</p>
 				</center>
 			</div>
 			<div class="col-md-4 info-level-two">
 				<center>
-					<a href="staffing.html"><span class="fa fa-magic"></span></a>
+					<a href="staffing.html"><span class="fa fa-users"></span></a>
 					<br/>
 
 					<h3>It Staffing </h3>
 
 					<p align="justify">
-						We provide you highly skill experienced professionals who are just the right fit for the Role, your work
+						We provide you highly skill experienced professionals who are just the right fit for the Role,
+						your work
 						Culture and Values
 					</p>
 				</center>
@@ -401,7 +420,8 @@
 
 
 <a name="software-offerings"></a>
-<div class="container-fluid block-two section-block section-header software-offerings-header section-block-software-offerings">
+<div
+	class="container-fluid block-two section-block section-header software-offerings-header section-block-software-offerings">
 	<div class="wrapper">
 		<div class="container section-heading-block">
 			<div class="row">
@@ -426,7 +446,8 @@
 		<div class="row">
 			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
-					<div class="card-img" style="background: url('assets/images/home/Telecom-Software.jpg');background-size: cover;"></div>
+					<div class="card-img"
+					     style="background: url('assets/images/home/Telecom-Software.jpg');background-size: cover;"></div>
 					<div class="card-text">
 						<h2> Telecom Software </h2>
 						<hr/>
@@ -441,7 +462,8 @@
 			</div>
 			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
-					<div class="card-img" style="background: url('assets/images/home/Mobility-Solutions.jpg');background-size: cover;"></div>
+					<div class="card-img"
+					     style="background: url('assets/images/home/Mobility-Solutions.jpg');background-size: cover;"></div>
 					<div class="card-text">
 						<h2> Mobility Solutions </h2>
 						<hr/>
@@ -457,7 +479,8 @@
 			</div>
 			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
-					<div class="card-img" style="background: url('assets/images/home/Enterprise-Applications.jpg');background-size: cover;"></div>
+					<div class="card-img"
+					     style="background: url('assets/images/home/Enterprise-Applications.jpg');background-size: cover;"></div>
 					<div class="card-text">
 						<h2> Enterprise Applications</h2>
 						<hr/>
@@ -475,7 +498,8 @@
 		<div class="row">
 			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
-					<div class="card-img" style="background: url('assets/images/home/Workflow-Automation.png');background-size: cover;"></div>
+					<div class="card-img"
+					     style="background: url('assets/images/home/Workflow-Automation.png');background-size: cover;"></div>
 					<div class="card-text">
 						<h2> Business Process Automation </h2>
 						<hr/>
@@ -491,7 +515,8 @@
 			</div>
 			<div class="col-md-4 software-offering-thumbs">
 				<div class="info-main-body">
-					<div class="card-img" style="background: url('assets/images/home/Software-Testing.jpg');background-size: cover;"></div>
+					<div class="card-img"
+					     style="background: url('assets/images/home/Software-Testing.jpg');background-size: cover;"></div>
 					<div class="card-text">
 						<h2> Software Testing </h2>
 						<hr/>
@@ -573,150 +598,137 @@
 <a name="careers"></a>
 <div class="container-fluid block-two section-block section-header careers-header section-block-careers">
 	<div class="col-xs-12">
-		<h1>Careers</h1>
-	</div>
-</div>
-
-<div class="container-fluid block-two section-block section-header contact-header section-block-contact">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-heading-block-body">
-					<center>
-						<h1 class="section-heading">Testimonals</h1>
-						<hr class="heading"/>
+		<div class="container block-two section-block section-header careers-header section-block-careers">
+			<div class="row">
+				<div class="col-md-12 info-level-five text-center">
+					<br/><br/>
+					<h1 style="color: green"> Careers </h1>
+					<hr class="heading" style="border-top: 1px solid #d0d0d0;"/>
+					<br/><br/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+					<img class="img img-responsive" src="assets/images/careers-tree.jpg">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-8 col-xs-offset-2">
+					<br/><br/>
+					<p align="justify">
+						At iQuent, we achieve our organizational goals by hiring competent workforce, providing them
+						appropriate trainings and inspiring them. It is our skilled and dedicated workforce and their
+						ability to deliver the best that makes iQuent a preferred employer. It is the continuous
+						learning and development which leads to growth.
+						We make sure that all our employees reach their maximum career potential through professional
+						goal setting, planning and training & development programs.
 						<br/><br/>
-					</center>
+						<b>At iQuent, our employees: </b> <br/>
+
+						&#9728; Believe in SPEED & SIMPLICITY <br/>
+						&#9728; TRUST customers they work for <br/>
+						&#9728; Have PRIDE in what they do <br/>
+						&#9728; ENJOY the work they do <br/>
+						&#9728; Give their BEST <br/>
+						&#9728; Deliver as a TEAM <br/>
+						<br/>
+						We always look for performance oriented people to lead different positions at iQuent
+						Technologies.
+					</p>
+					<br/><br/>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<ul class="testimonal">
-					<li>
-						<div class="testimonal-image">
-							<img class="img-circle img-responsive" src="assets/images/users/1.jpg" alt="">
-						</div>
-						<div class="testimonal-panel">
-							<div class="testimonal-heading">
-								<h4>Krishcdbry</h4>
-								<h4 class="subheading">CEO & Founder, Heartynote Groups</h4>
+</div>
+<br/><br/>
+<div class="container-fluid block-two section-block section-header contact-header section-block-testimonals">
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-heading-block-body">
+						<center>
+							<h1 class="section-heading" style="color: #fff;">Testimonals</h1>
+							<hr class="heading" style="border-top: 1px solid #fff;"/>
+							<br/><br/>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="testimonal">
+						<li>
+							<div class="testimonal-image">
+								<img class="img-circle img-responsive" src="assets/images/users/1.jpg" alt="">
 							</div>
-							<div class="testimonal-body">
-								<p class="text-muted">
-									Sample stuff data he opineion of may random stuff
-									and data have been under documents ad having
-									lot of stake under ut.
-								</p>
+							<div class="testimonal-panel">
+								<div class="testimonal-heading">
+									<h4>Krishcdbry</h4>
+									<h4 class="subheading">CEO & Founder, Heartynote Groups</h4>
+								</div>
+								<div class="testimonal-body">
+									<p class="text-muted">
+										Sample stuff data he opineion of may random stuff
+										and data have been under documents ad having
+										lot of stake under ut.
+									</p>
+								</div>
 							</div>
-						</div>
-						<div class="line"></div>
-					</li>
-					<li class="testimonal-inverted">
-						<div class="testimonal-image">
-							<img class="img-circle img-responsive" src="assets/images/users/2.jpg" alt="">
-						</div>
-						<div class="testimonal-panel">
-							<div class="testimonal-heading">
-								<h4>Kingcdbry</h4>
-								<h4 class="subheading">Software Engineer, krishcdbry Pvt Ltd.</h4>
+							<div class="line"></div>
+						</li>
+						<li class="testimonal-inverted">
+							<div class="testimonal-image">
+								<img class="img-circle img-responsive" src="assets/images/users/2.jpg" alt="">
 							</div>
-							<div class="testimonal-body">
-								<p class="text-muted">
-									Sample stuff data he opineion of may random stuff
-									and data have been under documents ad having
-									lot of stake under ut.
-								</p>
+							<div class="testimonal-panel">
+								<div class="testimonal-heading">
+									<h4>Kingcdbry</h4>
+									<h4 class="subheading">Software Engineer, krishcdbry Pvt Ltd.</h4>
+								</div>
+								<div class="testimonal-body">
+									<p class="text-muted">
+										Sample stuff data he opineion of may random stuff
+										and data have been under documents ad having
+										lot of stake under ut.
+									</p>
+								</div>
 							</div>
-						</div>
-						<div class="line"></div>
-					</li>
-					<li>
-						<div class="testimonal-image">
-							<img class="img-circle img-responsive" src="assets/images/users/3.jpg" alt="">
-						</div>
-						<div class="testimonal-panel">
-							<div class="testimonal-heading">
-								<h4>Krishcdbry</h4>
-								<h4 class="subheading">Technical Lead, miSport Pvt Ltd</h4>
+							<div class="line"></div>
+						</li>
+						<li>
+							<div class="testimonal-image">
+								<img class="img-circle img-responsive" src="assets/images/users/3.jpg" alt="">
 							</div>
-							<div class="testimonal-body">
-								<p class="text-muted">
-									Sample stuff data he opineion of may random stuff
-									and data have been under documents ad having
-									lot of stake under ut.
-								</p>
+							<div class="testimonal-panel">
+								<div class="testimonal-heading">
+									<h4>Krishcdbry</h4>
+									<h4 class="subheading">Technical Lead, miSport Pvt Ltd</h4>
+								</div>
+								<div class="testimonal-body">
+									<p class="text-muted">
+										Sample stuff data he opineion of may random stuff
+										and data have been under documents ad having
+										lot of stake under ut.
+									</p>
+								</div>
 							</div>
-						</div>
-						<div class="line"></div>
-					</li>
-					<li class="testimonal-inverted">
-						<div class="testimonal-image">
-							<img class="img-circle img-responsive" src="assets/images/users/1.jpg" alt="">
-						</div>
-						<div class="testimonal-panel">
-							<div class="testimonal-heading">
-								<h4>Krishcdbry</h4>
-								<h4 class="subheading">CEO & Founder, Heartynote Groups</h4>
-							</div>
-							<div class="testimonal-body">
-								<p class="text-muted">
-									Sample stuff data he opineion of may random stuff
-									and data have been under documents ad having
-									lot of stake under ut.
-								</p>
-							</div>
-						</div>
-						<div class="line"></div>
-					</li>
-					<li>
-						<div class="testimonal-image">
-							<img class="img-circle img-responsive" src="assets/images/users/2.jpg" alt="">
-						</div>
-						<div class="testimonal-panel">
-							<div class="testimonal-heading">
-								<h4>Kingcdbry</h4>
-								<h4 class="subheading">Software Engineer, krishcdbry Pvt Ltd.</h4>
-							</div>
-							<div class="testimonal-body">
-								<p class="text-muted">
-									Sample stuff data he opineion of may random stuff
-									and data have been under documents ad having
-									lot of stake under ut.
-								</p>
-							</div>
-						</div>
-						<div class="line"></div>
-					</li>
-					<li class="testimonal-inverted">
-						<div class="testimonal-image">
-							<img class="img-circle img-responsive" src="assets/images/users/3.jpg" alt="">
-						</div>
-						<div class="testimonal-panel">
-							<div class="testimonal-heading">
-								<h4>Krishcdbry</h4>
-								<h4 class="subheading">Technical Lead, miSport Pvt Ltd</h4>
-							</div>
-							<div class="testimonal-body">
-								<p class="text-muted">
-									Sample stuff data he opineion of may random stuff
-									and data have been under documents ad having
-									lot of stake under ut.
-								</p>
-							</div>
-						</div>
-					</li>
-				</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.086339932076!2d-74.03710638398047!3d40.71611577933155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250a924da09ad%3A0xff456387edb563e1!2s101+Hudson+St%2C+Jersey+City%2C+NJ+07302%2C+USA!5e0!3m2!1sen!2sin!4v1474753460405"
-        height="690" class="container-fluid" width="100%" frameborder="0"
-        style="border:0;padding-right: 0px; padding-left:0px;" allowfullscreen></iframe>
+<iframe
+	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.086339932076!2d-74.03710638398047!3d40.71611577933155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250a924da09ad%3A0xff456387edb563e1!2s101+Hudson+St%2C+Jersey+City%2C+NJ+07302%2C+USA!5e0!3m2!1sen!2sin!4v1474753460405"
+	height="690" class="container-fluid" width="100%" frameborder="0"
+	style="border:0;padding-right: 0px; padding-left:0px;" allowfullscreen></iframe>
+
 <a name="contact"></a>
 <div class="container-fluid section-block section-ten section-block-contact">
 	<div class="wrapper">
@@ -743,17 +755,21 @@
 						<p style="font-size: 16px;">101 Hudson Street<br/></p>
 						<p style="font-size: 16px;">21st Floor, Jersey City<br/></p>
 						<p style="font-size: 16px;">New Jersey 07302<br/></p>
-						<p style="font-size: 16px;">E-mail: <a href="mailto:info@iquenttech.com" style="color: #2aabd2">info@iquenttech.com</a></p>
+						<p style="font-size: 16px;">E-mail: <a href="mailto:info@iquenttech.com" style="color: #2aabd2">info@iquenttech.com</a>
+						</p>
 
 					</div>
 					<div class="col-md-4 info-level-ten text-left">
 						<h3 style="font-size: 20px;"><b>Marketing</b><br/></h3>
-						<p style="font-size: 16px;">E-mail: <a href="mailto:marketing@iquenttech.com" style="color: #2aabd2">marketing@iquenttech.com</a><br/></p>
+						<p style="font-size: 16px;">E-mail: <a href="mailto:marketing@iquenttech.com"
+						                                       style="color: #2aabd2">marketing@iquenttech.com</a><br/>
+						</p>
 						<p style="font-size: 16px;">Tel: +1 732 334 0966</p>
 					</div>
 					<div class="col-md-4 info-level-ten text-left">
 						<h3 style="font-size: 20px;"><b>Services and General Information</b><br/></h3>
-						<p style="font-size: 16px;">	E-mail: <a href="mailto:info@iquenttech.com" style="color: #2aabd2">info@iquenttech.com</a><br/></p>
+						<p style="font-size: 16px;"> E-mail: <a href="mailto:info@iquenttech.com"
+						                                        style="color: #2aabd2">info@iquenttech.com</a><br/></p>
 					</div>
 				</div>
 			</div>
@@ -761,65 +777,128 @@
 	</div>
 </div>
 
-<div class="container-fluid" style="background-color: #222; height:475px;">
+<div class="container-fluid" style="background-color: #222;">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<br/><br/>
+				<img src="assets/images/logo.png">
+				<hr style="border-top: 2px solid #444;"/>
+			</div>
+		</div>
+	</div>
 	<div class="container footerMenu">
 		<div class="row">
 			<div class="col-md-12 footerMenu">
 				<div class="col-md-2 col-sm-4">
 					<h3>Company</h3>
 					<ul>
-						<a href="about.html"><li>Company Overview</li></a>
-						<a href="why-us.html"><li>Why iQuent</li></a>
-						<a href="vision-mission.html"><li>Our Beliefs</li></a>
+						<a href="about.html">
+							<li>Company Overview</li>
+						</a>
+						<a href="why-us.html">
+							<li>Why iQuent</li>
+						</a>
+						<a href="vision-mission.html">
+							<li>Our Beliefs</li>
+						</a>
 					</ul>
 				</div>
 				<div class="col-md-2 col-sm-4">
 					<h3>Engineering Services</h3>
 					<ul>
-						<a href="business-analysis.html"><li>Business Analysis</li></a>
-						<a href="strategy-design.html"><li>innovation Strategy and Design</li></a>
-						<a href="system-integration.html"><li>System Integration</li></a>
-						<a href="m2m-overview.html"><li>Machine to Machine</li></a>
-						<a href="enterprise-mobility-services.html"><li>Mobility Services</li></a>
-						<a href="testing-validation.html"><li>Testing and Validation</li></a>
-						<a href="deployment.html"><li>Deployment and Transition</li></a>
-						<a href="analytics.html"><li>Data Analytics</li></a>
-						<a href="staffing.html"><li>IT Staffing</li></a>
+						<a href="business-analysis.html">
+							<li>Business Analysis</li>
+						</a>
+						<a href="strategy-design.html">
+							<li>innovation Strategy and Design</li>
+						</a>
+						<a href="system-integration.html">
+							<li>System Integration</li>
+						</a>
+						<a href="m2m-overview.html">
+							<li>Machine to Machine</li>
+						</a>
+						<a href="enterprise-mobility-services.html">
+							<li>Mobility Services</li>
+						</a>
+						<a href="testing-validation.html">
+							<li>Testing and Validation</li>
+						</a>
+						<a href="deployment.html">
+							<li>Deployment and Transition</li>
+						</a>
+						<a href="analytics.html">
+							<li>Data Analytics</li>
+						</a>
+						<a href="staffing.html">
+							<li>IT Staffing</li>
+						</a>
 					</ul>
 				</div>
 				<div class="col-md-2 col-sm-4">
 					<h3>Software Offerings</h3>
 					<ul>
-						<a href="telecom-software.html"><li>Telecom Software</li></a>
-						<a href="enterprise-mobility.html"><li>Mobility Solutions</li></a>
-						<a href="mobile-applications.html"><li>Enterprise Applications</li></a>
-						<a href="business-applications.html"><li>Business Process Automation</li></a>
-						<a href="software-testing.html"><li>Software Testing</li></a>
+						<a href="telecom-software.html">
+							<li>Telecom Software</li>
+						</a>
+						<a href="enterprise-mobility.html">
+							<li>Mobility Solutions</li>
+						</a>
+						<a href="mobile-applications.html">
+							<li>Enterprise Applications</li>
+						</a>
+						<a href="business-applications.html">
+							<li>Business Process Automation</li>
+						</a>
+						<a href="software-testing.html">
+							<li>Software Testing</li>
+						</a>
 					</ul>
 				</div>
 				<div class="col-md-2 col-sm-4">
 					<h3>Operations</h3>
 					<ul>
-						<a href="processes.html"><li>Project Management</li></a>
-						<a href="release-management.html"><li>Release Management</li></a>
-						<a href="service-management.html"><li>Service Management</li></a>
-						<a href="quality-processes.html"><li>Quality Management</li></a>
-						<a href="agile-processes.html"><li>Agile Development</li></a>
-						<a href="sustenance.html"><li>Sustenance</li></a>
+						<a href="processes.html">
+							<li>Project Management</li>
+						</a>
+						<a href="release-management.html">
+							<li>Release Management</li>
+						</a>
+						<a href="service-management.html">
+							<li>Service Management</li>
+						</a>
+						<a href="quality-processes.html">
+							<li>Quality Management</li>
+						</a>
+						<a href="agile-processes.html">
+							<li>Agile Development</li>
+						</a>
+						<a href="sustenance.html">
+							<li>Sustenance</li>
+						</a>
 					</ul>
 				</div>
 				<div class="col-md-2 col-sm-4">
 					<h3>Careers</h3>
 					<ul>
-						<a href="careers.html"><li>Careers With Us</li></a>
-						<a href="training.html"><li>Training</li></a>
+						<a href="careers.html">
+							<li>Careers With Us</li>
+						</a>
+						<a href="training.html">
+							<li>Training</li>
+						</a>
 					</ul>
 				</div>
 				<div class="col-md-2 col-sm-4">
 					<h3>Contacts Us</h3>
 					<ul style="">
-						<a href="contacts.html"><li>Support</li></a>
-						<a href="contacts.html"><li>Contact Us</li></a>
+						<a href="contacts.html">
+							<li>Support</li>
+						</a>
+						<a href="contacts.html">
+							<li>Contact Us</li>
+						</a>
 					</ul>
 				</div>
 			</div>

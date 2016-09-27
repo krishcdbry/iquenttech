@@ -203,7 +203,7 @@ Template Each
 }
 
 .sample-slide-heading h1 {
-	font-size: 6em;
+	font-size: 5em;
 	font-weight: bold;
 	margin: 0;
 	padding: 0;
@@ -270,19 +270,19 @@ Template Each
 }
 
 .sample-carousel .slides .slide-1 {
-	background-image: url(../images/6.jpg);
+	background-image: url(../images/slide2.jpg);
 }
 
 .sample-carousel .slides .slide-2 {
-	background-image: url(../images/5.jpg);
+	background-image: url(../images/slide5.jpg);
 }
 
 .sample-carousel .slides .slide-3 {
-	background-image: url(../images/9.jpg);
+	background-image: url(../images/5.jpg);
 }
 
 .sample-carousel .slides .slide-4 {
-	background-image: url(../images/8.jpg);
+	background-image: url(../images/slide6.jpg);
 }
 
 .sample-carousel .slides .slide-5 {
@@ -418,13 +418,14 @@ h1.section-heading {
 }
 
 .contact-header {
-	background: url('../images/operations.jpg');
+	background: url('http://sunrise-treecare.com/wp-content/uploads/2016/08/testimonialssmiley.png');
 	padding-left: 0px;
 	padding-right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .careers-header {
-	background: url('../images/operations.jpg');
 	padding-left: 0px;
 	padding-right: 0px;
 }
@@ -763,21 +764,21 @@ Testimonal level-seven
 	margin-top:22px;
 	margin-bottom: 4px;
 	padding:0;
-	color: #b3b3b3;
+	color: #fff;
 }
 
 .testimonal .testimonal-heading h4.subheading {
 	margin:0;
 	padding:0;
 	text-transform: none;
-	font-size:18px;
-	color:#333333;
+	font-size:15px;
+	color:#d0d0d0;
 }
 
 .testimonal .testimonal-body>p,
 .testimonal .testimonal-body>ul {
 	margin-bottom: 0;
-	color:#808080;
+	color:#fff;
 }
 /*Style for even div.line*/
 .testimonal>li:nth-child(odd) .line:before {
